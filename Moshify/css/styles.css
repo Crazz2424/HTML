@@ -321,6 +321,20 @@ a {
     font-weight: 500;
     font-size: 2.4rem;
 }
+
+.plan--popular .card__header {
+    position: relative;
+}
+
+.plan--popular .card__header::before { /* If a plan is popular want to insert a popular icon before the card header */
+    content: url(../images/popular.svg);
+    width: 40px;
+    display: inline-block;
+    position: absolute; /* If using absolute positioning means parent card__header should be a relative positioned element */
+    top: -6px;
+    right: 5%;
+}
+
 @media screen and (min-width: 1024px) {
     .plan__name {
         font-size: 1.4rem;
