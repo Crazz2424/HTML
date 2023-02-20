@@ -243,6 +243,11 @@ a {
     background: #ec3000;
 }
 
+.btn--stretched {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
 .btn--block {
     width: 100%;
     display: inline-block;
@@ -503,3 +508,49 @@ q    .testimonial .quote__author {
 .testimonial .quote {
     margin-left: 6rem;
 }
+
+/* Callouts */
+.callout {
+    padding: 4rem;
+    border-radius: 5px;
+}
+
+.callout--primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.callout__heading {
+    color: #fff;
+    margin-top: 0;
+    font-size: 3rem;
+
+}
+
+.callout .btn {
+    justify-self: center;
+    align-self: center;
+}
+
+.callout__content {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .callout .grid--1x2 {
+        /* If have grid that is 1x2 then change template of grid
+        originally set to be 1fr 1fr (two columns of equal width but here we set the second column to auto to make the
+        button wide enough to fit space ann rest of extra space goes to 1st column. */
+        grid-template-columns: 1fr auto; 
+    }
+
+    .callout__content {
+        text-align: left;
+    }
+    .callout .btn {
+        justify-self: start;
+        margin: 0 2rem;
+    }
+
+}
+
