@@ -441,3 +441,20 @@ a {
         font-size: 1.6rem;
     }
 }
+
+/* Grids */
+.grid {
+    display: grid;
+}
+
+@media screen and (min-width: 768px) { /* If screen is wider than x768px, common size frameworks use like bootstrap */
+    .grid--1x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) { 
+    .grid--1x3 {
+        grid-template-columns: repeat(3, 1fr); /* On wide screens grid will have 3 columns but less than 1024, only 1 coloumn */
+    }
+}
