@@ -588,3 +588,45 @@ q    .testimonial .quote__author {
     max-height: 100vh;
     opacity: 1;
 }
+
+/* Blocks */
+.block {
+    --padding-vertical: 6rem; /* This custom property is availiable to an element w/ a class of block and all its children */
+    padding: var(--padding-vertical) 2rem;
+    text-align: center;
+}
+
+.block__header {
+    text-align:center;
+}
+
+.block__heading {
+    margin-top: 0;
+    
+}
+
+.block--dark {
+    background-color: #000;
+    color: #7b858b;
+}
+
+.block--dark .block__heading { /* If in the block--dark element, headings should be white */
+    color: #fff;
+}
+
+.block--skewed-right {
+    padding: calc(var(--padding-vertical) + 4rem); /* Whatever the padding is, add 4rems to it */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%); /* starts top left corner, top right corner, etc */
+}
+
+.block--skewed-left {
+    padding: calc(var(--padding-vertical) + 4rem); /* Whatever the padding is, add 4rems to it */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%); /* starts top left corner, top right corner, etc */
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto; /* Zero pixels for vertical margin and auto for horizontal margin
+    which will equally distribute space on center of block */
+}
+
