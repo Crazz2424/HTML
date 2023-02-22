@@ -336,6 +336,10 @@ a {
     color: #fff;
 }
 
+.card--primary .badge--primary { /* If have a primary card and in the card has the primary badge then set background to */
+    background: #126de4;
+}
+
 .card--secondary .card__header {
     background: var(--color-secondary);
     color: #fff;
@@ -347,61 +351,80 @@ a {
 }
 
 /* Plans */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
 .plan__name {
-    color: #fff;
-    margin: 0;
-    font-weight: 500;
-    font-size: 2.4rem;
-}
-
-.plan--popular .card__header {
-    position: relative;
-}
-
-.plan--popular .card__header::before { /* If a plan is popular want to insert a popular icon before the card header */
-    content: url(../images/popular.svg);
-    width: 40px;
-    display: inline-block;
-    position: absolute; /* If using absolute positioning means parent card__header should be a relative positioned element */
-    top: -6px;
-    right: 5%;
-}
-
-@media screen and (min-width: 1024px) {
-    .plan__name {
-        font-size: 1.4rem;
-    }
-    .plan__price {
-        font-size: 5rem;
-    }
-    .plan__billing-cycle {
-        font-size: 1.6rem;
-    }
-    .plan__description {
-        font-size: 1.7rem;
-    }
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
 }
 
 .plan__price {
-    font-size: 6rem;
+  font-size: 6rem;
 }
 
-.plan_billing-cycle {
-    font-size: 2.4rem;
-    font-weight: 300;
-    opacity: 0.8;
-    margin-right: 1rem;
+.plan__billing-cycle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
 }
 
 .plan__description {
-    font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 1px;
-    display: block;
-
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
 }
+
 .plan .list__item {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.plan--popular {
+  transform: scale(1.1);
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan--popular .card__header::before {
+  content: url(../images/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 1.4rem;
+  }
+
+  .plan__price {
+    font-size: 5rem;
+  }
+
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+
+  .plan__description {
+    font-size: 1.7rem;
+  }
 }
 
 /* Media */
@@ -486,7 +509,7 @@ a {
 
 @media screen and (min-width: 1024px) { 
     .grid--1x3 {
-        grid-template-columns: repeatq(3, 1fr); /* On wide screens grid will have 3 columns but less than 1024, only 1 coloumn */
+        grid-template-columns: repeat(3, 1fr); /* On wide screens grid will have 3 columns but less than 1024, only 1 coloumn */
     }
 }
 
@@ -759,5 +782,21 @@ q    .testimonial .quote__author {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
         /* Will try to auto-fit the columns with a min of 100px and a max of 1fr
          so if extra space will be evenly dist. Usefull if need to add more items to list later */
+    }
+}
+
+/* Plans Block */
+.block-plans .grid {
+    gap: 8rem 4rem;
+  }
+  
+.block-plans .card {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+@media screen and (min-width: 1024x768) {
+    .block-plans {
+
     }
 }
