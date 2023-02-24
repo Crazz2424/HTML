@@ -18,6 +18,10 @@
 }
 
 /*Typography */
+::selection {       /* A pseudo element selector to specify color of selected text on page */
+    background: var(--color-primary);
+    color: #fff;
+}
 
 html {
     /* 62.5% of 16px = 10px */
@@ -49,6 +53,7 @@ h2 {
 
 h3 {
     font-size: 3rem;
+    font-weight: 500;
     
 }
 
@@ -143,7 +148,7 @@ a {
 .list {
    list-style: none; 
    padding-left: 0;
-   color: var(--color-headinds);
+   
 }
 
 .list--inline .list__item {
@@ -153,7 +158,8 @@ a {
 
 .list--tick {
     list-style-image: url(../images/tick.svg);
-    padding-left: 3rem;    
+    padding-left: 3rem;
+    color: var(--color-headinds);    
 }
 
 .list--tick .list__item {
@@ -442,6 +448,7 @@ a {
 
 .media__image {
     margin-top: 1rem;
+    margin-bottom: 4rem;
 }
 
 /* Quotes */
@@ -643,13 +650,15 @@ q    .testimonial .quote__author {
     color: #7b858b;
 }
 
-.block--dark .block__heading { /* If in the block--dark element, headings should be white */
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 { /* If in the block--dark element, headings should be white */
     color: #fff;
 }
 
 .block--skewed-right {
     padding: calc(var(--padding-vertical) + 4rem); /* Whatever the padding is, add 4rems to it */
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%); /* starts top left corner, top right corner, etc */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%); /* starts top left corner, top right corner, etc */
 }
 
 .block--skewed-left {
@@ -729,9 +738,6 @@ q    .testimonial .quote__author {
 }
 
 /* Hero */
-.hero {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
 
 .hero__tagline { /* The elements below are part of an element called tagline that is part of the hero components.
     if have other paragrahps later with exact same style want to extract this content into a separate reusable class.
@@ -820,3 +826,25 @@ q    .testimonial .quote__author {
     }
 }
 
+/* Showcase Block */
+.block-showcase__image > img { /* in block-showcase, if have image do this */
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .block-showcase .grid {
+        grid-template-columns: 50% 50%; /* Means will take 50% of width of container */
+    }
+
+
+       
+    .block-showcase__image {
+       justify-self: end;
+    }
+
+    .block-showcase__image > img { /* Using diect child selector to target this image */
+        width: auto;
+        max-width: 700px;
+    }
+}
+    
