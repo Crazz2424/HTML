@@ -677,9 +677,9 @@ q    .testimonial .quote__author {
 .nav {
     background: #000;
     display: flex;
-    justify-content: space-between; /* Need to push items to egdge of th container */
+    justify-content: space-between; /* Need to push items to egdge of the container */
     flex-wrap: wrap;
-    padding: 0rem 1rem;
+    padding: 1rem;
     align-items: center;
 }
 
