@@ -774,8 +774,10 @@ q    .testimonial .quote__author {
 }
 
 .block-domain__prices {
+    color: var(--color-headinds);
+    
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* split grid into 3 slices and give each column one slice */
+    grid-template-columns: repeat(2, 1fr); /* split grid into 3 slices and give each column one slice */
     grid-template-rows: repeat(2, 6rem); /* For setting hieght of each row */
     font-size: 2rem;
     font-weight: 600;
