@@ -600,7 +600,7 @@ q    .testimonial .quote__author {
 /* Collapsibles */
 .collapsible__header {
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .collapsible__heading {
@@ -852,6 +852,7 @@ q    .testimonial .quote__author {
 /* Footer */
 .footer {
     background: #232323;
+    padding-top: 10rem;
   }
   
   .footer a {
@@ -875,6 +876,8 @@ q    .testimonial .quote__author {
   .footer__heading {
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.5;
   }
   
   .footer__brand {
@@ -883,9 +886,6 @@ q    .testimonial .quote__author {
   }
   
   .footer__brand img {
-    /* TODO: Consider refactoring this and applying it to 
-    all images. */
-    width: 100%;
     max-width: 230px;
   }
   
@@ -928,4 +928,9 @@ q    .testimonial .quote__author {
     .footer__heading {
       font-size: 1.6rem;
     }
+  }
+
+  /* Sign-up Callout */
+.callout-signup {
+    transform: translateY(5rem);
   }
