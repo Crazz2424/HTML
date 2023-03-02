@@ -751,6 +751,8 @@ q    .testimonial .quote__author {
 
 .hero__image {
     width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 @media screen and (min-width: 768px) {
