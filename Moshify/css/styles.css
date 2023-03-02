@@ -750,9 +750,8 @@ q    .testimonial .quote__author {
 }
 
 .hero__image {
-    width: auto;
-    height: auto;
-    object-fit: cover;
+    width: 100%;
+    
 } 
 
 @media screen and (min-width: 768px) {
@@ -767,11 +766,11 @@ q    .testimonial .quote__author {
         
 }
 
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
     .hero {
       padding-top: 0;
     }
-  }
+  } */
 
 /* Domain Block */
 .block-domain .input-group {
