@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build index.html",
+    "start": "parcel index.html",
+    "dev": "parcel index.html",
     "build": "parcel build index.html"
     
   },
@@ -12,7 +15,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "^1.12.3",
+    "cssnano": "^4.1.11",
+    "three": "^0.140.0"
     
   }
 }
