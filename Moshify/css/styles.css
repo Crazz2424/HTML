@@ -749,11 +749,11 @@ q    .testimonial .quote__author {
     margin: 2rem 0 5rem; /* Top margin of 2rems and bottom of 5 */
 }
 
-.hero__image {
+/*.hero__image {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+} */
 
 @media screen and (min-width: 768px) {
     .hero {
@@ -766,6 +766,12 @@ q    .testimonial .quote__author {
     }
         
 }
+
+@media screen and (min-width: 1024px) {
+    .hero {
+      padding-top: 0;
+    }
+  }
 
 /* Domain Block */
 .block-domain .input-group {
