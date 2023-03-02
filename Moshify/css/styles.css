@@ -749,11 +749,11 @@ q    .testimonial .quote__author {
     margin: 2rem 0 5rem; /* Top margin of 2rems and bottom of 5 */
 }
 
-/*.hero__image {
-    width: 100%;
+.hero__image {
+    width: auto;
     height: auto;
     object-fit: cover;
-} */
+} 
 
 @media screen and (min-width: 768px) {
     .hero {
